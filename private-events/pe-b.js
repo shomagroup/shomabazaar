@@ -1,5 +1,5 @@
 // UPDATE CHECK
-$('.event-heading').text('v-CHECK 1');
+$('.event-heading').text('BETA-CHECK 1');
 
 // Initial Setting
 $('.show').removeClass('show');
