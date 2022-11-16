@@ -10,7 +10,7 @@ $('.form-field-div').on('click', function() {
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK 
-// $('.event-heading').text('UPDATE-CHECK 4');
+$('.event-heading').text('UPDATE-CHECK 4');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
