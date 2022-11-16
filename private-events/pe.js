@@ -61,7 +61,7 @@ $(".event-next-button[next='1']").on('click', function() {
             $('.desired-time').addClass('show');
             // Submit shadow form
             $('#attempt').trigger('click')
-            $('#wf-form-attempt-to').reset()
+                // $('#wf-form-attempt-to').reset()
                 // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
                 $('.event-heading').text('Small Event');
