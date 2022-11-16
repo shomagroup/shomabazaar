@@ -4,13 +4,14 @@ $(".contact-form-sect, [next='1']").addClass('show');
 $('.le-mod').removeClass('le-mod');
 $('.se-mod').removeClass('se-mod');
 $('[le-mod], .sauce').removeClass('active');
+
 // no please
 $('.form-field-div').on('click', function() {
     $(this).find('.please-fill').removeClass('please-fill');
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK 
-$('.event-heading').text('UPDATE-CHECK 4');
+$('.event-heading').text('UPDATE-CHECK 5');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
@@ -60,7 +61,7 @@ $(".event-next-button[next='1']").on('click', function() {
             $('.desired-time').addClass('show');
             // Submit shadow form
             $('#attempt').trigger('click')
-            $('#h-reset').trigger('click')
+            $('#wf-form-attempt-to').reset()
                 // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
                 $('.event-heading').text('Small Event');
