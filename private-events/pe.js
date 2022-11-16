@@ -13,7 +13,7 @@ $('.form-field-div').on('click', function() {
 });
 // UPDATE CHECK $('.event-heading').text('UPDATE-CHECK 4');
 
-// ATTEMPT TO SUBMIT [SHADOW FORM]
+// ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
     $("#h-name").val($("[name='Name']").val());
     $("#h-compn").val($("[name='Company']").val());
@@ -57,7 +57,7 @@ $(".event-next-button[next='1']").on('click', function() {
             $(".event-next-button[next='1']").removeClass('show');
             $('.desired-time').addClass('show');
             // Submit shadow form
-            $('#attempt-to-sub').trigger('click')
+            $('#attempt').trigger('click')
                 // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
                 $('.event-heading').text('Small Event');
