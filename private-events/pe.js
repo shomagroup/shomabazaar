@@ -4,14 +4,13 @@ $(".contact-form-sect, [next='1']").addClass('show');
 $('.le-mod').removeClass('le-mod');
 $('.se-mod').removeClass('se-mod');
 $('[le-mod], .sauce').removeClass('active');
-
-
 // no please
 $('.form-field-div').on('click', function() {
     $(this).find('.please-fill').removeClass('please-fill');
     $('.warning-txt').removeClass('show');
 });
-// UPDATE CHECK $('.event-heading').text('UPDATE-CHECK 4');
+// UPDATE CHECK 
+$('.event-heading').text('UPDATE-CHECK 1');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
@@ -19,6 +18,9 @@ $("[step='1']").on('input', function() {
     $("#h-compn").val($("[name='Company']").val());
     $("#h-phone").val($("[name='Phone']").val());
     $("#h-email").val($("[name='Email']").val());
+});
+$('[event]').on('click', function() {
+    $("#h-event").val($(this).val());
 });
 
 // STEP-1 NEXT BUTTON --------------------------------------
