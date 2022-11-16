@@ -10,7 +10,7 @@ $('.form-field-div').on('click', function() {
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK 
-$('.event-heading').text('UPDATE-CHECK 4');
+// $('.event-heading').text('UPDATE-CHECK 4');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
@@ -386,15 +386,7 @@ $('[datepicker]').datepicker({
         }
     }
 });
-// LUXON
-var DateTime = luxon.DateTime;
-let subtime = document.querySelector('[subtime]');
-const timey = DateTime.now().setZone('America/New_York').toFormat("(HH:mm) ccc LLL dd yyyy");
-subtime.value = timey;
-const timer = setInterval(() => {
-    const timey = DateTime.now().setZone('America/New_York').toFormat("(HH:mm) ccc LLL dd yyyy");
-    subtime.value = timey;
-}, 1000);
+
 
 // // TODAY
 // let input3 = $('#today');
