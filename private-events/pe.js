@@ -12,6 +12,15 @@ $('.form-field-div').on('click', function() {
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK $('.event-heading').text('UPDATE-CHECK 4');
+
+// ATTEMPT TO SUBMIT [SHADOW FORM]
+$("[step='1']").on('input', function() {
+    $("#h-name").val($("[name='Name']").val());
+    $("#h-compn").val($("[name='Company']").val());
+    $("#h-phone").val($("[name='Phone']").val());
+    $("#h-email").val($("[name='Email']").val());
+});
+
 // STEP-1 NEXT BUTTON --------------------------------------
 $(".event-next-button[next='1']").on('click', function() {
     // var update
@@ -47,7 +56,9 @@ $(".event-next-button[next='1']").on('click', function() {
             $(".event-next-button[next='2']").addClass('show');
             $(".event-next-button[next='1']").removeClass('show');
             $('.desired-time').addClass('show');
-            // selection  adjustment for small event
+            // Submit shadow form
+            $('#attempt-to-sub').trigger('click')
+                // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
                 $('.event-heading').text('Small Event');
                 $('#inquiry-type').val('Small Event');
@@ -76,6 +87,8 @@ $(".event-next-button[next='1']").on('click', function() {
         }
     }
 });
+
+
 // STEP-1 END ---------------------------
 
 // BACK STEP-2
