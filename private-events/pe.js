@@ -387,6 +387,18 @@ $('[datepicker]').datepicker({
     }
 });
 
+// LUXON
+var DateTime = luxon.DateTime;
+let subtime = document.querySelector('#subtime');
+let hSubtime = document.querySelector('#h-subtime');
+const timey = DateTime.now().setZone('America/New_York').toFormat("(HH:mm) ccc LLL dd yyyy");
+subtime.value = timey;
+hSubtime.value = timey;
+const timer = setInterval(() => {
+    const timey = DateTime.now().setZone('America/New_York').toFormat("(HH:mm) ccc LLL dd yyyy");
+    subtime.value = timey;
+    hSubtime.value = timey;
+}, 1000);
 
 // // TODAY
 // let input3 = $('#today');
