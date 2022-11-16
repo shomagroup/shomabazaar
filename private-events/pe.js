@@ -11,7 +11,7 @@ $('.form-field-div').on('click', function() {
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK 
-$('.event-heading').text('UPDATE-CHECK 5');
+// $('.event-heading').text('UPDATE-CHECK 5');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
