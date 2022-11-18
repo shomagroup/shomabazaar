@@ -6,12 +6,12 @@ $('.se-mod').removeClass('se-mod');
 $('[le-mod], .sauce').removeClass('active');
 
 // no please
-$('.form-field-div').on('click', function() {
+$('.form-field-div').on('input', function() {
     $(this).find('.please-fill').removeClass('please-fill');
     $('.warning-txt').removeClass('show');
 });
 // UPDATE CHECK 
-// $('.event-heading').text('UPDATE-CHECK 5');
+$('.event-heading').text('UPDATE-CHECK');
 
 // ATTEMPT Form [SHADOW FORM]
 $("[step='1']").on('input', function() {
@@ -61,7 +61,6 @@ $(".event-next-button[next='1']").on('click', function() {
             $('.desired-time').addClass('show');
             // Submit shadow form
             $('#attempt').trigger('click')
-                // $('#wf-form-attempt-to').reset()
                 // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
                 $('.event-heading').text('Small Event');
