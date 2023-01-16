@@ -16,7 +16,7 @@ $('[parkingback]').on('click', function() {
     $('.body').removeClass('no-scrollito');
 });
 $('.p-language-button').on('click', function() {
-    $('.parking-text, .p-copy-swap div, .p-copy-swap p').toggleClass('active');
+    $('.parking-text, .p-copy-swap div, .p-copy-2').toggleClass('active');
 });
 $('[parking-info]').on('click', function() {
     $('.parking-info').addClass('active');
