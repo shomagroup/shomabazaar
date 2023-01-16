@@ -17,10 +17,7 @@ $('[parkingback]').on('click', function() {
 });
 $('.p-language-button').on('click', function() {
     $('.parking-text').toggleClass('active');
-    $('.parking-text-2').toggleClass('active');
-    $('.parking-text-3').toggleClass('active');
-    $('.parking-text-4').toggleClass('active');
-    $('.parking-text-5').toggleClass('active');
+    $('.p-step-copy').toggleClass('active');
 });
 $('[parking-info]').on('click', function() {
     $('.parking-info').addClass('active');
