@@ -8,6 +8,10 @@ $('[resy-close]').on('click', function() {
     $('.resy-pop-wrap').removeClass('show');
 });
 // Parking
+if (window.location.href.indexOf("parking") > -1) {
+    $('.parking-info').addClass('active');
+    $('.body').addClass('no-scrollito');
+}
 $('.pop-close').on('click', function() {
     $('.popup-wrapper').css('display', 'none');
 });
