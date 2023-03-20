@@ -405,3 +405,6 @@ const timer = setInterval(() => {
 // let input3 = $('#today');
 // const timey3 = DateTime.now().setZone('America/New_York').toFormat("LL/dd/yy");
 // input3.value = timey3;
+$('.form-in-container').on('click', function() {
+    $('#timestamper').val('HELLO?');
+});
