@@ -280,7 +280,7 @@ $('[vendor]').on('click', function() {
         $('.eb-vendor-sub-wrap.sauce').removeClass('active');
         $('[sauce-included]').prop("checked", false);
         $('[sauce-included]').removeClass('checked');
-        $('[sauce-included]').sibling('.radio-flex').removeClass('w--redirected-checked');
+        $('[sauce-included]').siblings('.radio-flex').removeClass('w--redirected-checked');
     } else { $('.eb-vendor-sub-wrap.sauce').addClass('active'); }
 });
 
