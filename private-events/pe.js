@@ -203,13 +203,11 @@ $('[vendor]').on('click', function() {
     let vendors = $('[vendor]').filter('.checked').map((k, box) => box.name).toArray().join(', ');
     $("#vendor-value").val(vendors);
     // VARS
-    var ash = $(".checked[vendor='ash']").length;
     var bff = $(".checked[vendor='bff']").length;
-    var chik = $(".checked[vendor='chik']").length;
     var doce = $(".checked[vendor='doce']").length;
     var dog = $(".checked[vendor='dog']").length;
     var poke = $(".checked[vendor='poke']").length;
-    var belly = $(".checked[vendor='belly']").length;
+    var sndw = $(".checked[vendor='sndw']").length;
     var shahs = $(".checked[vendor='shahs']").length;
     var plin = $(".checked[vendor='plin']").length;
 
@@ -221,9 +219,6 @@ $('[vendor]').on('click', function() {
         if ($(this).is("[vendor='bff']")) {
             if (bff === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
-        if ($(this).is("[vendor='chik']")) {
-            if (chik === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
-        }
         if ($(this).is("[vendor='doce']")) {
             if (doce === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
@@ -233,11 +228,11 @@ $('[vendor]').on('click', function() {
         if ($(this).is("[vendor='poke']")) {
             if (poke === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
-        if ($(this).is("[vendor='belly']")) {
-            if (belly === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
-        }
         if ($(this).is("[vendor='shahs']")) {
             if (shahs === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
+        }
+        if ($(this).is("[vendor='sndw']")) {
+            if (sndw === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
         if ($(this).is("[vendor='plin']")) {
             if (plin === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
@@ -245,14 +240,8 @@ $('[vendor]').on('click', function() {
     }
     // UNCHECKED
     if ($(this).not('.checked')) {
-        if ($(this).is("[vendor='ash']")) {
-            if (ash === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
-        }
         if ($(this).is("[vendor='bff']")) {
             if (bff === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
-        }
-        if ($(this).is("[vendor='chik']")) {
-            if (chik === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
         }
         if ($(this).is("[vendor='doce']")) {
             if (doce === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
@@ -263,11 +252,11 @@ $('[vendor]').on('click', function() {
         if ($(this).is("[vendor='poke']")) {
             if (poke === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
         }
-        if ($(this).is("[vendor='belly']")) {
-            if (belly === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
-        }
         if ($(this).is("[vendor='shahs']")) {
             if (shahs === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
+        }
+        if ($(this).is("[vendor='sndw']")) {
+            if (sndw === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
         }
         if ($(this).is("[vendor='plin']")) {
             if (plin === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
@@ -292,7 +281,6 @@ $('[dessert]').on('click', function() {
     $("#dessert-value").val(desserts);
     // Vendor Count for Restriction
     var dessertBff = $(".checked[dessert='bff']").length;
-    var dessertChik = $(".checked[dessert='chik']").length;
     var dessertTint = $(".checked[dessert='tint']").length;
     var dessertShahs = $(".checked[dessert='shahs']").length;
     var dessertSweet = $(".checked[dessert='sweet']").length;
@@ -301,9 +289,6 @@ $('[dessert]').on('click', function() {
     if ($(this).is('.checked')) {
         if ($(this).is("[dessert='bff']")) {
             if (dessertBff === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
-        }
-        if ($(this).is("[dessert='chik']")) {
-            if (dessertChik === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
         }
         if ($(this).is("[dessert='tint']")) {
             if (dessertTint === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
@@ -319,9 +304,6 @@ $('[dessert]').on('click', function() {
     if ($(this).not('.checked')) {
         if ($(this).is("[dessert='bff']")) {
             if (dessertBff === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
-        }
-        if ($(this).is("[dessert='chik']")) {
-            if (dessertChik === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
         }
         if ($(this).is("[dessert='tint']")) {
             if (dessertTint === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
