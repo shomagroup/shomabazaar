@@ -200,7 +200,7 @@ $(".back-button-gal[back='4']").on('click', function() {
 // ADDING VENDOR REQUIREMENT
 $('[vendor]').on('click', function() {
     $(this).toggleClass('checked');
-    let vendors = $('[vendor]').filter('.checked').map((k, box) => box.name).toArray().join(', ');
+    let vendors = $('[vendor]').filter('.checked').map((k, box) => box.name+'"').toArray().join(', ');
     $("#vendor-value").val(vendors);
     // VARS
     var bff = $(".checked[vendor='bff']").length;
@@ -263,14 +263,6 @@ $('[vendor]').on('click', function() {
         }
     }
 
-
-    // Activate / Deactivate Sauces on Chikin
-    if (!$('*[sauce]').is('.checked')) {
-        $('.eb-vendor-sub-wrap.sauce').removeClass('active');
-        $('[sauce-included]').prop("checked", false);
-        $('[sauce-included]').removeClass('checked');
-        $('[sauce-included]').siblings('.radio-flex').removeClass('w--redirected-checked');
-    } else { $('.eb-vendor-sub-wrap.sauce').addClass('active'); }
 });
 
 // When dessert is clicked
@@ -387,6 +379,3 @@ const timer = setInterval(() => {
 // let input3 = $('#today');
 // const timey3 = DateTime.now().setZone('America/New_York').toFormat("LL/dd/yy");
 // input3.value = timey3;
-$('.form-in-container').on('click', function() {
-    $('#timestamper').val('HELLO?');
-});
