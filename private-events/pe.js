@@ -200,8 +200,9 @@ $(".back-button-gal[back='4']").on('click', function() {
 // ADDING VENDOR REQUIREMENT
 $('[vendor]').on('click', function() {
     $(this).toggleClass('checked');
-    let vendors = $('[vendor]').filter('.checked').map((k, box) => "'"+box.name+"'").toArray().join(', ').replace(/'/g, '');
+    let vendors = $('[vendor]').filter('.checked').map((k, box) => '"'+box.name+'"').toArray().join(', ');
     $("#vendor-value").val(vendors);
+    console.log(vendors);
     // VARS
     var bff = $(".checked[vendor='bff']").length;
     var doce = $(".checked[vendor='doce']").length;
