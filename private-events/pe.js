@@ -163,10 +163,10 @@ $(".event-next-button[next='2']").on('click', function() {
 
 
         if ($("input[name='Company']").val().length) {
-            console.log(true)
+            console.log('true')
         } 
         if ($("input[name='Company']").val().length) {
-            console.log(true)
+            console.log('false')
         }
         //if ($("[event='large-event']").is(':checked')) {
         //    $('input[name="type-num"]').val('LE-'+$("[name='Guests']").val());
