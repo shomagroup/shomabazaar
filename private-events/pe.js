@@ -163,14 +163,21 @@ $(".event-next-button[next='2']").on('click', function() {
 
 
         if ($("input[name='Company']").val().length) {
-            console.log('true')
-        } 
-        if ($("input[name='Company']").val().length) {
-            console.log('false')
+            if ($("[event='large-event']").is(':checked')) {
+               $('input[name="type-num"]').val($("input[name='Company']").val()+" LE-"+$("[name='Guests']").val());
+            }
+            if ($("[event='small-event']").is(':checked')) {
+               $('input[name="type-num"]').val($("input[name='Company']").val()+" SE-"+$("[name='Guests']").val());
+            }
         }
-        //if ($("[event='large-event']").is(':checked')) {
-        //    $('input[name="type-num"]').val('LE-'+$("[name='Guests']").val());
-        //}
+        if (!$("input[name='Company']").val().length) {
+            if ($("[event='large-event']").is(':checked')) {
+               $('input[name="type-num"]').val("LE-"+$("[name='Guests']").val());
+            }
+            if ($("[event='small-event']").is(':checked')) {
+               $('input[name="type-num"]').val("SE-"+$("[name='Guests']").val());
+            }
+        }
     }
 });
 // STEP-2 END ---------------------------
