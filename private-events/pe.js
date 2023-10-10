@@ -160,6 +160,17 @@ $(".event-next-button[next='2']").on('click', function() {
         $(".event-next-button[next='2']").removeClass('show');
         $(".back-button-gal[back='2']").removeClass('show');
         $('.beverage-selection').addClass('show');
+
+
+        if ($("input[name='Company']").val().length) {
+            console.log(true)
+        } 
+        if ($("input[name='Company']").val().length) {
+            console.log(true)
+        }
+        //if ($("[event='large-event']").is(':checked')) {
+        //    $('input[name="type-num"]').val('LE-'+$("[name='Guests']").val());
+        //}
     }
 });
 // STEP-2 END ---------------------------
