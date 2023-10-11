@@ -162,6 +162,7 @@ $(".event-next-button[next='2']").on('click', function() {
         $('.beverage-selection').addClass('show');
 
         $('input[name="guest-number"]').val($('input[name="Guests"]').val());
+        $('input[name="datepicked"]').val($('input[name="Date"]').val());
 
         if ($("input[name='Company']").val().length) {
             if ($("[event='large-event']").is(':checked')) {
