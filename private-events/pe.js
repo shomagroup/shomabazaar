@@ -160,8 +160,8 @@ $(".event-next-button[next='2']").on('click', function() {
         $(".event-next-button[next='2']").removeClass('show');
         $(".back-button-gal[back='2']").removeClass('show');
         $('.beverage-selection').addClass('show');
-
-
+        $('input[name="guest-number"]').val($('input[name="Guests"]'));
+        
         if ($("input[name='Company']").val().length) {
             if ($("[event='large-event']").is(':checked')) {
                $('input[name="type-num"]').val($("input[name='Company']").val()+" LE-"+$("[name='Guests']").val());
