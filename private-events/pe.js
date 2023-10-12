@@ -220,7 +220,7 @@ $(".back-button-gal[back='4']").on('click', function() {
 // ADDING VENDOR REQUIREMENT
 $('[vendor]').on('click', function() {
     $(this).toggleClass('checked');
-    let vendors = $('[vendor]').filter('.checked').map((k, box) => '&quote;'+box.name+'&quote;').toArray().join(', ');
+    let vendors = $('[vendor]').filter('.checked').map((k, box) => '"'+box.name+'"').toArray().join(', ');
     $("#vendor-value").val(vendors);
     console.log(vendors);
     // VARS
@@ -290,7 +290,7 @@ $('[vendor]').on('click', function() {
 $('[dessert]').on('click', function() {
     $(this).toggleClass('checked');
     // written value
-    let desserts = $('[dessert]').filter('.checked').map((k, box) => '&quote;'+box.name+'&quote;').toArray().join(', ');
+    let desserts = $('[dessert]').filter('.checked').map((k, box) => '"'+box.name+'"').toArray().join(', ');
     $("#dessert-value").val(desserts);
     // Vendor Count for Restriction
     var dessertBff = $(".checked[dessert='bff']").length;
