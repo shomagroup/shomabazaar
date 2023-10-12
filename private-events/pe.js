@@ -63,7 +63,7 @@ $(".event-next-button[next='1']").on('click', function() {
             $('#attempt').trigger('click')
                 // selection  adjustment for small event
             if ($("[event='small-event']").is(':checked')) {
-                $('.event-heading').text('Small Event');
+                $('.event-heading').text('Small Event Inquiry');
                 $('#inquiry-type').val('Small Event');
                 $('[event-inquiry]').text('Small Event');
                 $('[guest-info]').text('* 10 - 20 people for Small Events');
@@ -75,7 +75,7 @@ $(".event-next-button[next='1']").on('click', function() {
                 $('[se]').attr('required', '1');
                 // selection  adjustment for small event
             } else if ($("[event='large-event']").is(':checked')) {
-                $('.event-heading').text('Large Event');
+                $('.event-heading').text('Large Event Inquiry');
                 $('#inquiry-type').val('Large Event');
                 $('[event-inquiry]').text('Large Event');
                 $('[guest-info]').text('* Minimum of 21 people for private events');
