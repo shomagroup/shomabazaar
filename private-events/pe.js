@@ -230,13 +230,9 @@ $('[vendor]').on('click', function() {
     var poke = $(".checked[vendor='poke']").length;
     var sndw = $(".checked[vendor='sndw']").length;
     var shahs = $(".checked[vendor='shahs']").length;
-    var plin = $(".checked[vendor='plin']").length;
 
     // CHECKED
     if ($(this).is('.checked')) {
-        if ($(this).is("[vendor='ash']")) {
-            if (ash === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
-        }
         if ($(this).is("[vendor='bff']")) {
             if (bff === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
@@ -254,9 +250,6 @@ $('[vendor]').on('click', function() {
         }
         if ($(this).is("[vendor='sndw']")) {
             if (sndw === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
-        }
-        if ($(this).is("[vendor='plin']")) {
-            if (plin === 1) { $('#vendor-restriction1').val(function(i, val) { return +val + 1 }); }
         }
     }
     // UNCHECKED
@@ -279,9 +272,6 @@ $('[vendor]').on('click', function() {
         if ($(this).is("[vendor='sndw']")) {
             if (sndw === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
         }
-        if ($(this).is("[vendor='plin']")) {
-            if (plin === 0) { $('#vendor-restriction1').val(function(i, val) { return +val - 1 }); }
-        }
     }
 
 });
@@ -294,7 +284,6 @@ $('[dessert]').on('click', function() {
     $("#dessert-value").val(desserts);
     // Vendor Count for Restriction
     var dessertBff = $(".checked[dessert='bff']").length;
-    var dessertTint = $(".checked[dessert='tint']").length;
     var dessertShahs = $(".checked[dessert='shahs']").length;
     var dessertSweet = $(".checked[dessert='sweet']").length;
 
@@ -302,9 +291,6 @@ $('[dessert]').on('click', function() {
     if ($(this).is('.checked')) {
         if ($(this).is("[dessert='bff']")) {
             if (dessertBff === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
-        }
-        if ($(this).is("[dessert='tint']")) {
-            if (dessertTint === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
         }
         if ($(this).is("[dessert='shahs']")) {
             if (dessertShahs === 1) { $('#vendor-restriction2').val(function(i, val) { return +val + 1 }); }
@@ -317,9 +303,6 @@ $('[dessert]').on('click', function() {
     if ($(this).not('.checked')) {
         if ($(this).is("[dessert='bff']")) {
             if (dessertBff === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
-        }
-        if ($(this).is("[dessert='tint']")) {
-            if (dessertTint === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
         }
         if ($(this).is("[dessert='shahs']")) {
             if (dessertShahs === 0) { $('#vendor-restriction2').val(function(i, val) { return +val - 1 }); }
