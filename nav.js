@@ -35,30 +35,38 @@ $('[backerito]').attr('onclick', 'history.back(-1)');
 
 // === UTM TRACKER === //
 $.urlParam = function(name) {
-    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
-    if (results == null) { return null; } else { return results[1] || 0; }
+var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+if (results == null) { return null; } else { return results[1] || 0; }
 }
-//
-var inTwoMins = new Date(new Date().getTime() + 2 * 60 * 1000);
+// var inTwoMins = new Date(new Date().getTime() + 2 * 60 * 1000);
 //cookie setter
-//
-if (!$.urlParam('utm_source') == null || !$.urlParam('utm_source') == "") {
+if (!($.urlParam('utm_source') == null) && !($.urlParam('utm_source') == "") && !($.urlParam('utm_source') == undefined) ) {
 var source = $.urlParam('utm_source').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
-Cookies.set('source', source, { expires: 30 });
-Cookies.set('utm_url', url, { expires: 30 });
-}
-//
-if (!$.urlParam('utm_medium') == null || !$.urlParam('utm_medium') == "") {
+// source, exist
+if (!($.urlParam('utm_medium') == null) && !($.urlParam('utm_medium') == "")  && !($.urlParam('utm_medium') == undefined) ) {
 var medium = $.urlParam('utm_medium').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
-Cookies.set('medium', medium, { expires: 30 });
+} else { var medium = "⠀"}
+if (!($.urlParam('utm_campaign') == null) && !($.urlParam('utm_campaign') == "") && !($.urlParam('utm_campaign') == undefined)  ) {
+var campaign = $.urlParam('utm_campaign').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
+} else {var campaign = "⠀"}
+if (!($.urlParam('utm_term') == null) && !($.urlParam('utm_term') == "") && !($.urlParam('utm_term') == undefined)  ) {
+var term = $.urlParam('utm_term').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
+} else {var term = "⠀"}
+var utm_id = source+' / '+medium+' / '+campaign+' / '+term;
+var utm = {
+    "source": source,
+    "medium": medium,
+    "campaign": campaign,
+    "term": term,
+    "id": utm_id
 }
-//
-if (!$.urlParam('utm_campaign') == null || !$.urlParam('utm_campaign') == "") {
-    var campaign = $.urlParam('utm_campaign').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
-    Cookies.set('campaign', campaign, { expires: 30 });
-}
-//
-if (!$.urlParam('utm_term') == null || !$.urlParam('utm_term') == "") {
-    var term = $.urlParam('utm_term').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
-    Cookies.set('term', term, { expires: 30 });
-}
+Cookies.set("utm", JSON.stringify(utm) , {expires:30})
+};
+
+if (!(Cookies.get('utm') == null) || !(Cookies.get('utm') == undefined)) { // UTM NOT EMPTY
+$("input[name='utm_id']").val(JSON.parse(Cookies.get('utm')).id);
+$("input[name='utm_source']").val(JSON.parse(Cookies.get('utm')).source);
+$("input[name='utm_medium']").val(JSON.parse(Cookies.get('utm')).medium);
+$("input[name='utm_campaign']").val(JSON.parse(Cookies.get('utm')).campaign);
+$("input[name='utm_term']").val(JSON.parse(Cookies.get('utm')).term);
+} else {}
