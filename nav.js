@@ -52,7 +52,7 @@ var campaign = $.urlParam('utm_campaign').split('&')[0].replace(/\+/g, ' ').repl
 if (!($.urlParam('utm_term') == null) && !($.urlParam('utm_term') == "") && !($.urlParam('utm_term') == undefined)  ) {
 var term = $.urlParam('utm_term').split('&')[0].replace(/\+/g, ' ').replace(/%20/g, ' ');
 } else {var term = "⠀"}
-var utm_id = source+' / '+medium+' / '+campaign+' / '+term;
+var utm_id = source+' / '+medium+' / '+campaign
 var utm = {
     "source": source,
     "medium": medium,
