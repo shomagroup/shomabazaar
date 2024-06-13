@@ -2,11 +2,12 @@
 $(document).ready(function() {
 
 function walldown(target) {
-    target.closest('popup-subscribe').addClass('wall-down');
+    target.closest('.popup-subscribe').addClass('wall-down');
 }
 function wallup() {
     $('[data-popup-sms]').removeClass('wall-down');
 }
+
 $('[popup-close]').on('click', function() {
     walldown($(this));
 });
