@@ -7,10 +7,10 @@ function walldown(target) {
 function wallup() {
     $('[data-popup-sms]').removeClass('wall-down');
 }
-$('[popup-close]').on('click', function{
+$('[popup-close]').on('click', function() {
     walldown($(this));
 });
-$('[data-popup-sms-trigger]').on('click', function{
+$('[data-popup-sms-trigger]').on('click', function() {
     wallup();
 });
 
